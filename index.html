@@ -10,6 +10,8 @@
 
 <link rel="stylesheet" href="style.css">
 
+<script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+
 </head>
 
 <body>
@@ -30,14 +32,17 @@
 </nav>
 
 
+
 <section class="hero">
+
+<div class="hero-bg"></div>
 
 <img src="profile.jpeg" class="profile">
 
 <h1>Backend & Automation Engineer</h1>
 
 <p>
-Building APIs, automation pipelines, and enterprise workflow systems.
+Designing APIs, automation pipelines, and enterprise workflow systems.
 </p>
 
 <div class="hero-buttons">
@@ -53,6 +58,7 @@ LinkedIn
 </section>
 
 
+
 <section id="about">
 
 <h2>About</h2>
@@ -63,12 +69,29 @@ data pipelines, and workflow automation systems.
 </p>
 
 <p>
-My work focuses on reducing manual operations through APIs, automation
-pipelines, and Microsoft Power Platform applications used across
-HR, operations, and MIS teams.
+I build APIs, automation workflows, and Power Platform solutions
+that reduce manual operations across HR, operations, and MIS teams.
 </p>
 
 </section>
+
+
+
+<section id="identity">
+
+<h2>Developer Identity</h2>
+
+<div class="grid">
+
+<div class="card">Automation Architect</div>
+<div class="card">API Builder</div>
+<div class="card">Workflow Engineer</div>
+<div class="card">Data Pipeline Builder</div>
+
+</div>
+
+</section>
+
 
 
 <section id="stack">
@@ -82,7 +105,6 @@ HR, operations, and MIS teams.
 <div class="card">Flask</div>
 <div class="card">Pandas</div>
 <div class="card">Docker</div>
-<div class="card">Redis</div>
 <div class="card">Dataverse</div>
 <div class="card">Power Apps</div>
 <div class="card">Power Automate</div>
@@ -92,6 +114,7 @@ HR, operations, and MIS teams.
 </div>
 
 </section>
+
 
 
 <section id="backend">
@@ -108,12 +131,6 @@ Backend service that ingests encrypted transaction updates
 and document uploads from external systems.
 </p>
 
-<ul>
-<li>Flask API service</li>
-<li>Encrypted payload validation</li>
-<li>Automated document ingestion</li>
-</ul>
-
 </div>
 
 
@@ -122,15 +139,9 @@ and document uploads from external systems.
 <h3>Biometric Attendance Automation</h3>
 
 <p>
-Data pipeline that reconciles biometric punch logs with leave records
-and generates normalized attendance records automatically.
+Automated reconciliation pipeline for biometric punch data
+and employee attendance records.
 </p>
-
-<ul>
-<li>Pandas ETL pipelines</li>
-<li>Spreadsheet ingestion</li>
-<li>Automated attendance calculation</li>
-</ul>
 
 </div>
 
@@ -140,14 +151,9 @@ and generates normalized attendance records automatically.
 <h3>API Driven Payroll Processing</h3>
 
 <p>
-Converted cron-based payroll workflows into observable API-driven services.
+Converted cron-based payroll workflows into API driven
+automation services using FastAPI.
 </p>
-
-<ul>
-<li>FastAPI endpoints</li>
-<li>Operational status tracking</li>
-<li>Batch automation workflows</li>
-</ul>
 
 </div>
 
@@ -157,13 +163,14 @@ Converted cron-based payroll workflows into observable API-driven services.
 <h3>Payment Automation Engine</h3>
 
 <p>
-Extended payout processing workflows with metric ingestion
-pipelines and scheduled automation jobs.
+Extended monthly payout calculations with automated
+data ingestion pipelines and scheduled jobs.
 </p>
 
 </div>
 
 </section>
+
 
 
 <section id="platform">
@@ -175,17 +182,10 @@ pipelines and scheduled automation jobs.
 <h3>Internal Automation Platform</h3>
 
 <p>
-Built and deployed 15+ Power Apps canvas applications integrated
-with Power Automate workflows used across HR, operations,
+Developed 15+ Power Apps canvas applications integrated with
+Power Automate workflows used across HR, operations,
 and MIS teams.
 </p>
-
-<ul>
-<li>Dataverse data management</li>
-<li>Automated email notifications</li>
-<li>Workflow orchestration</li>
-<li>Operational dashboards</li>
-</ul>
 
 </div>
 
@@ -195,16 +195,9 @@ and MIS teams.
 <h3>Team Approval Automation System</h3>
 
 <p>
-Multi-level approval workflow application designed using
-Power Apps and Power Automate.
+Multi-level approval workflow application using Power Apps,
+Power Automate, and Dataverse.
 </p>
-
-<ul>
-<li>Two level approval routing</li>
-<li>Status tracking</li>
-<li>Automated email notifications</li>
-<li>Dataverse storage</li>
-</ul>
 
 </div>
 
@@ -214,8 +207,8 @@ Power Apps and Power Automate.
 <h3>Document Management System</h3>
 
 <p>
-Power Apps application integrated with SharePoint and
-Microsoft Graph APIs for document tracking and reporting.
+SharePoint integrated Power Apps solution with automated
+report generation using Microsoft Graph API.
 </p>
 
 </div>
@@ -226,55 +219,24 @@ Microsoft Graph APIs for document tracking and reporting.
 <h3>Attendance Automation System</h3>
 
 <p>
-Power Apps interface combined with automated workflows
-integrating external monitoring APIs.
+Power Apps interface connected with monitoring APIs
+and automated attendance workflows.
 </p>
 
 </div>
 
 </section>
+
 
 
 <section id="architecture">
 
-<h2>Engineering Patterns</h2>
+<h2>System Architecture</h2>
 
-<div class="architecture-grid">
-
-<div class="arch-card">
-<h4>ETL Pipelines</h4>
-<p>
-Batch data ingestion pipelines using pandas
-for normalization and enrichment.
-</p>
-</div>
-
-<div class="arch-card">
-<h4>Automation Workflows</h4>
-<p>
-Power Automate flows orchestrating business processes
-across enterprise systems.
-</p>
-</div>
-
-<div class="arch-card">
-<h4>Secure API Integrations</h4>
-<p>
-Encrypted payload validation and callback processing.
-</p>
-</div>
-
-<div class="arch-card">
-<h4>Config Driven Systems</h4>
-<p>
-Business rules defined through configuration instead
-of hardcoded logic.
-</p>
-</div>
-
-</div>
+<div id="architecture-diagram"></div>
 
 </section>
+
 
 
 <section id="contact">
@@ -286,7 +248,7 @@ Interested in backend engineering, automation platforms,
 or enterprise workflow systems? Let's connect.
 </p>
 
-<div class="contact-buttons">
+<div class="hero-buttons">
 
 <a href="mailto:ankitknp0@gmail.com" class="btn">Email</a>
 
@@ -299,6 +261,7 @@ GitHub
 </section>
 
 
+
 <footer>
 
 <p>© 2026 Ankit Verma</p>
@@ -306,8 +269,20 @@ GitHub
 </footer>
 
 
+
+<div id="chatbot">
+
+<div id="chat-header">Ask about my experience</div>
+
+<div id="chat-messages"></div>
+
+<input id="chat-input" placeholder="Ask about projects, stack or experience">
+
+</div>
+
+
+
 <script src="script.js"></script>
 
 </body>
-
 </html>
