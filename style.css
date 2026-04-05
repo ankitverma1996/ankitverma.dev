@@ -1,11 +1,11 @@
 body{
-font-family: system-ui;
 margin:0;
+font-family:system-ui;
 background:#0f172a;
 color:white;
 }
 
-.nav{
+nav{
 display:flex;
 justify-content:space-between;
 padding:20px 10%;
@@ -14,10 +14,10 @@ position:sticky;
 top:0;
 }
 
-.links a{
+.nav-links a{
 margin-left:20px;
-color:white;
 text-decoration:none;
+color:white;
 }
 
 .hero{
@@ -25,24 +25,19 @@ text-align:center;
 padding:120px 20px;
 }
 
+.profile{
+width:140px;
+border-radius:50%;
+margin-bottom:20px;
+}
+
 .hero h1{
-font-size:42px;
-max-width:900px;
-margin:auto;
-}
-
-.hero p{
-margin-top:20px;
-opacity:.8;
-}
-
-.buttons{
-margin-top:30px;
+font-size:40px;
 }
 
 .btn{
-padding:12px 22px;
 background:#6366f1;
+padding:12px 22px;
 border-radius:8px;
 color:white;
 text-decoration:none;
@@ -54,13 +49,13 @@ background:#1e293b;
 }
 
 section{
-padding:80px 12%;
+padding:80px 10%;
 }
 
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
-gap:16px;
+gap:15px;
 }
 
 .card{
@@ -74,17 +69,23 @@ text-align:center;
 background:#1e293b;
 padding:25px;
 border-radius:10px;
-margin-bottom:30px;
+margin-bottom:25px;
 }
 
-.architecture{
+.architecture-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:20px;
 }
 
+.arch-card{
+background:#1e293b;
+padding:20px;
+border-radius:10px;
+}
+
 footer{
 text-align:center;
-padding:40px;
+padding:30px;
 background:#020617;
 }

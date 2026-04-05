@@ -8,20 +8,21 @@
 <title>Ankit Verma | Backend Engineer</title>
 
 <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-<nav class="nav">
+<nav>
 
 <div class="logo">
 Ankit Verma
 </div>
 
-<div class="links">
+<div class="nav-links">
 
 <a href="#about">About</a>
-<a href="#skills">Stack</a>
+<a href="#stack">Stack</a>
 <a href="#projects">Projects</a>
 <a href="#architecture">Architecture</a>
 <a href="#contact">Contact</a>
@@ -31,21 +32,19 @@ Ankit Verma
 </nav>
 
 
-<header class="hero">
+<section class="hero">
 
-<h1>
-Backend Engineer building automation systems and scalable APIs
-</h1>
+<img src="profile.jpg" class="profile">
+
+<h1>Backend Engineer & Automation Builder</h1>
 
 <p>
-Python • FastAPI • Dataverse • System Automation • API Platforms
+Designing APIs, automation pipelines, and data systems that remove manual work.
 </p>
 
-<div class="buttons">
+<div class="hero-buttons">
 
-<a href="resume.pdf" class="btn">
-Download Resume
-</a>
+<a href="resume.pdf" class="btn">Download Resume</a>
 
 <a href="https://linkedin.com/in/ankitverma1996" class="btn secondary">
 LinkedIn
@@ -53,7 +52,7 @@ LinkedIn
 
 </div>
 
-</header>
+</section>
 
 
 <section id="about">
@@ -61,155 +60,164 @@ LinkedIn
 <h2>About</h2>
 
 <p>
-Backend engineer focused on automation platforms, internal tooling, and scalable
-data pipelines.
+Backend engineer focused on building automation platforms, data pipelines,
+and operational tooling. My work centers around reducing manual workflows
+through APIs, batch processing systems, and cloud integrations.
+</p>
 
-I design systems that reduce operational workload through APIs, automation
-pipelines, and workflow engines.
-
-Recent work includes payroll automation systems, productivity analytics pipelines,
-and backend automation for HR operations.
+<p>
+I specialize in Python backend development, FastAPI services, ETL pipelines,
+and automation systems that integrate with enterprise platforms.
 </p>
 
 </section>
 
 
-<section id="skills">
+<section id="stack">
 
-<h2>Tech Stack</h2>
+<h2>Technology Stack</h2>
 
 <div class="grid">
 
 <div class="card">Python</div>
 <div class="card">FastAPI</div>
-<div class="card">REST APIs</div>
-<div class="card">Dataverse</div>
-<div class="card">Power Automate</div>
-<div class="card">Docker</div>
+<div class="card">Flask</div>
+<div class="card">Pandas</div>
 <div class="card">Redis</div>
-<div class="card">PostgreSQL</div>
-<div class="card">System Design</div>
+<div class="card">Docker</div>
+<div class="card">Dataverse</div>
+<div class="card">REST APIs</div>
+<div class="card">Automation Pipelines</div>
 
 </div>
 
 </section>
-
 
 
 <section id="projects">
 
-<h2>Engineering Projects</h2>
+<h2>Engineering Case Studies</h2>
 
 
 <div class="project">
 
-<h3>Payroll Automation Engine</h3>
+<h3>Secure Callback Integration</h3>
 
 <p>
-Automation system that processes payroll for gig workers with deduction
-rules, payout adjustments and compliance checks.
+Built a backend service that securely ingests external transaction updates
+and associated documents using encrypted payload validation and API authentication.
 </p>
 
 <ul>
-
-<li>Processes 400-500 workers per payroll cycle</li>
-<li>Automated deduction pipelines</li>
-<li>Integrated Dataverse data models</li>
-<li>Reduced manual payroll work significantly</li>
-
+<li>Encrypted request validation</li>
+<li>Automated document ingestion</li>
+<li>Secure record updates</li>
 </ul>
 
 </div>
 
 
-
 <div class="project">
 
-<h3>Teramind API Data Pipeline</h3>
+<h3>Biometric Attendance Automation</h3>
 
 <p>
-Backend ingestion system that fetches productivity analytics data
-from Teramind APIs and transforms it into internal reporting dashboards.
+Created a data pipeline that reconciles biometric punch logs with leave
+records and generates normalized attendance data automatically.
 </p>
 
 <ul>
-
-<li>Python data ingestion pipelines</li>
-<li>Automated API polling</li>
-<li>Data transformation pipelines</li>
-
+<li>Spreadsheet ingestion</li>
+<li>Pandas data transformation</li>
+<li>Automated attendance reconciliation</li>
 </ul>
 
 </div>
 
 
-
 <div class="project">
 
-<h3>Dataverse Automation Platform</h3>
+<h3>API Driven Payroll Processing</h3>
 
 <p>
-Internal backend automation platform connecting PowerApps workflows,
-Dataverse tables and automated backend logic.
+Converted a cron-based payroll workflow into an API driven system with
+better observability and manual execution capability.
 </p>
 
 <ul>
-
-<li>Attendance automation</li>
-<li>Onboarding workflows</li>
-<li>Document approval pipelines</li>
-
+<li>FastAPI endpoints</li>
+<li>Operational status tracking</li>
+<li>Automated payroll workflows</li>
 </ul>
 
 </div>
+
+
+<div class="project">
+
+<h3>Payment Automation Engine</h3>
+
+<p>
+Extended a monthly payment calculation engine with upload endpoints,
+metric ingestion pipelines and scheduled automation jobs.
+</p>
+
+</div>
+
+
+<div class="project">
+
+<h3>Config Driven ETL Rules</h3>
+
+<p>
+Built configuration-driven validation pipelines enabling rule changes
+without code modifications.
+</p>
+
+</div>
+
 
 </section>
-
 
 
 <section id="architecture">
 
-<h2>System Design Approach</h2>
+<h2>Architecture Patterns</h2>
 
-<div class="architecture">
+<div class="architecture-grid">
 
-<div>
-
-<h4>Automation First</h4>
-
+<div class="arch-card">
+<h4>ETL Pipelines</h4>
 <p>
-I prioritize reducing manual work by building automation pipelines
-and event-driven workflows.
+Batch ingestion pipelines for spreadsheets and APIs with normalization
+and enrichment layers.
 </p>
-
 </div>
 
-<div>
-
-<h4>API Driven Systems</h4>
-
+<div class="arch-card">
+<h4>Cron to API Conversion</h4>
 <p>
-Backend services communicate through clean REST APIs
-to enable modular architecture.
+Replacing opaque scheduled jobs with observable backend services.
 </p>
-
 </div>
 
-<div>
-
-<h4>Data Integrity</h4>
-
+<div class="arch-card">
+<h4>Secure Callback Systems</h4>
 <p>
-Systems are designed with validation layers to ensure
-data reliability across pipelines.
+Encrypted payload processing with document verification workflows.
 </p>
+</div>
 
+<div class="arch-card">
+<h4>Automation Pipelines</h4>
+<p>
+Scheduled workflows that remove manual reconciliation tasks.
+</p>
 </div>
 
 </div>
 
 </section>
-
 
 
 <section id="contact">
@@ -217,11 +225,11 @@ data reliability across pipelines.
 <h2>Contact</h2>
 
 <p>
-If you're building backend systems, automation platforms,
-or data pipelines, let's talk.
+Interested in backend systems, automation platforms, or data engineering
+workflows? Let's connect.
 </p>
 
-<div class="buttons">
+<div class="contact-buttons">
 
 <a href="mailto:youremail@gmail.com" class="btn">
 Email
@@ -236,12 +244,9 @@ GitHub
 </section>
 
 
-
 <footer>
 
-<p>
-© 2026 Ankit Verma
-</p>
+<p>© 2026 Ankit Verma</p>
 
 </footer>
 
