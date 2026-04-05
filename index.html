@@ -423,11 +423,28 @@ GitHub
 <p>&copy; 2026 Ankit Verma</p>
 </footer>
 
-<div id="chatbot" aria-label="Portfolio chatbot">
+<div class="chatbot-shell">
+<button
+id="chat-toggle"
+class="chat-toggle"
+type="button"
+aria-expanded="false"
+aria-controls="chatbot"
+>
+Ask Assistant
+</button>
+
+<div id="chatbot" aria-label="Portfolio chatbot" hidden>
 <div class="chatbot-card">
+<div class="chat-header-row">
 <div id="chat-header">
 <strong>Portfolio Assistant</strong>
 <p>Ask about projects, stack, architecture, experience, or contact.</p>
+</div>
+
+<button id="chat-close" class="chat-close" type="button" aria-label="Close assistant">
+Close
+</button>
 </div>
 
 <div id="chat-messages" aria-live="polite"></div>
@@ -441,6 +458,7 @@ GitHub
 <div class="chat-input-row">
 <input id="chat-input" placeholder="Ask a question about my work">
 <button id="chat-send" type="button">Send</button>
+</div>
 </div>
 </div>
 </div>
