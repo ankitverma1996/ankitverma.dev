@@ -18,7 +18,6 @@ content="Portfolio of Ankit Verma, a backend and automation engineer building AP
 <meta name="twitter:card" content="summary_large_image">
 <title>Ankit Verma | Backend & Automation Engineer</title>
 <link rel="stylesheet" href="style.css">
-<script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
 </head>
 <body>
 
@@ -30,6 +29,7 @@ content="Portfolio of Ankit Verma, a backend and automation engineer building AP
 <a href="#stack">Stack</a>
 <a href="#backend">Projects</a>
 <a href="#platform">Platform</a>
+<a href="#open-source">Open Source</a>
 <a href="#architecture">Architecture</a>
 <a href="#faq">FAQ</a>
 <a href="#contact">Contact</a>
@@ -252,6 +252,230 @@ repeatable batch processing.
 </div>
 </section>
 
+<section id="open-source">
+<div class="section-heading">
+<p class="section-kicker">Open Source</p>
+<h2>Public repos showing the actual code behind the work above</h2>
+<p>
+Three small, fully tested projects — each with CI running on every push —
+that mirror real patterns from production systems: secure API design,
+safe LLM agent permissions, and reliable ETL processing.
+</p>
+</div>
+
+<div class="project-grid">
+<article class="project">
+<p class="project-type">API &amp; Security</p>
+<h3>Secure Payroll Disbursement API</h3>
+<p>
+A FastAPI microservice demonstrating production payroll-system patterns:
+OAuth2 client-credentials auth, decimal-correct financial math, and hybrid
+AES/RSA encryption for payment payloads.
+</p>
+<ul>
+<li>Decimal-safe rounding, never bare floats, for currency math</li>
+<li>Fresh AES-256 key per request, RSA-encrypted, for each payload</li>
+<li>Batched disbursement with per-record success/failure tracking</li>
+</ul>
+<div class="project-tags">
+<span class="project-tag">FastAPI</span>
+<span class="project-tag">OAuth2</span>
+<span class="project-tag">AES/RSA</span>
+<span class="project-tag">pytest</span>
+</div>
+<p class="project-status">10 tests passing · CI on every push</p>
+
+<div id="diagram-payroll-api" class="flow-diagram flow-diagram--compact" aria-label="Animated diagram of the payroll API request flow">
+<svg class="flow-svg" viewBox="0 0 760 200" role="img" aria-labelledby="flow-title-payroll flow-desc-payroll">
+<title id="flow-title-payroll">Payroll API request flow</title>
+<desc id="flow-desc-payroll">A request authenticates via OAuth2, computes net pay with decimal-safe math, encrypts the payload with hybrid AES and RSA encryption, then disburses it in a tracked batch.</desc>
+<path class="flow-path-static" d="M32,90 L728,90" />
+
+<g class="flow-node" data-step="1">
+<rect x="32" y="60" width="150" height="60" rx="14" />
+<circle class="flow-node-badge" cx="44" cy="72" r="11" /><text class="flow-node-num" x="44" y="76">1</text>
+<text class="flow-node-label" x="107" y="86">OAuth2 Auth</text>
+<text class="flow-node-sub" x="107" y="102">client credentials</text>
+</g>
+
+<g class="flow-node" data-step="2">
+<rect x="214" y="60" width="150" height="60" rx="14" />
+<circle class="flow-node-badge" cx="226" cy="72" r="11" /><text class="flow-node-num" x="226" y="76">2</text>
+<text class="flow-node-label" x="289" y="86">Compute Pay</text>
+<text class="flow-node-sub" x="289" y="102">decimal-safe math</text>
+</g>
+
+<g class="flow-node" data-step="3">
+<rect x="396" y="60" width="150" height="60" rx="14" />
+<circle class="flow-node-badge" cx="408" cy="72" r="11" /><text class="flow-node-num" x="408" y="76">3</text>
+<text class="flow-node-label" x="471" y="86">Encrypt</text>
+<text class="flow-node-sub" x="471" y="102">AES-256 + RSA hybrid</text>
+</g>
+
+<g class="flow-node" data-step="4">
+<rect x="578" y="60" width="150" height="60" rx="14" />
+<circle class="flow-node-badge" cx="590" cy="72" r="11" /><text class="flow-node-num" x="590" y="76">4</text>
+<text class="flow-node-label" x="653" y="86">Disburse</text>
+<text class="flow-node-sub" x="653" y="102">batched, tracked</text>
+</g>
+
+<circle class="flow-pulse" r="6">
+<animateMotion dur="5s" repeatCount="indefinite" path="M32,90 L728,90" />
+</circle>
+<circle class="flow-pulse flow-pulse-delayed" r="6">
+<animateMotion dur="5s" repeatCount="indefinite" begin="-2.5s" path="M32,90 L728,90" />
+</circle>
+</svg>
+</div>
+
+<a class="project-link" href="https://github.com/ankitverma1996/secure-payroll-api" target="_blank" rel="noopener">
+View Code
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</a>
+</article>
+
+<article class="project">
+<p class="project-type">LLM Agent Safety</p>
+<h3>Safe LLM Agent — Tiered Permissions</h3>
+<p>
+A demo of the safety pattern behind a production Teams-based agent: the
+model can propose a mutation or a payment, but a human must approve it
+before it executes.
+</p>
+<ul>
+<li>Read actions execute immediately; mutation and money actions never do</li>
+<li>Approvals persisted to disk before execution, so a restart can't replay one</li>
+<li>Money-tier actions serialized behind a lock to prevent concurrent payments</li>
+</ul>
+<div class="project-tags">
+<span class="project-tag">Anthropic API</span>
+<span class="project-tag">Agent Safety</span>
+<span class="project-tag">Python</span>
+<span class="project-tag">pytest</span>
+</div>
+<p class="project-status">6 tests passing · CI on every push</p>
+
+<div id="diagram-agent" class="flow-diagram flow-diagram--compact" aria-label="Animated diagram of the tiered agent approval flow">
+<svg class="flow-svg" viewBox="0 0 760 200" role="img" aria-labelledby="flow-title-agent flow-desc-agent">
+<title id="flow-title-agent">Tiered agent approval flow</title>
+<desc id="flow-desc-agent">The model proposes a tool call, which is checked against its tier. Mutation and money tier actions wait for a human to approve with a code, persisted to disk, before executing.</desc>
+<path class="flow-path-static" d="M32,90 L728,90" />
+
+<g class="flow-node" data-step="1">
+<rect x="32" y="60" width="150" height="60" rx="14" />
+<circle class="flow-node-badge" cx="44" cy="72" r="11" /><text class="flow-node-num" x="44" y="76">1</text>
+<text class="flow-node-label" x="107" y="86">Model Call</text>
+<text class="flow-node-sub" x="107" y="102">proposes a tool</text>
+</g>
+
+<g class="flow-node" data-step="2">
+<rect x="214" y="60" width="150" height="60" rx="14" />
+<circle class="flow-node-badge" cx="226" cy="72" r="11" /><text class="flow-node-num" x="226" y="76">2</text>
+<text class="flow-node-label" x="289" y="86">Tier Check</text>
+<text class="flow-node-sub" x="289" y="102">read, mutation, money</text>
+</g>
+
+<g class="flow-node" data-step="3">
+<rect x="396" y="60" width="150" height="60" rx="14" />
+<circle class="flow-node-badge" cx="408" cy="72" r="11" /><text class="flow-node-num" x="408" y="76">3</text>
+<text class="flow-node-label" x="471" y="86">Human Approval</text>
+<text class="flow-node-sub" x="471" y="102">code, persisted</text>
+</g>
+
+<g class="flow-node" data-step="4">
+<rect x="578" y="60" width="150" height="60" rx="14" />
+<circle class="flow-node-badge" cx="590" cy="72" r="11" /><text class="flow-node-num" x="590" y="76">4</text>
+<text class="flow-node-label" x="653" y="86">Execute</text>
+<text class="flow-node-sub" x="653" y="102">money tier locked</text>
+</g>
+
+<circle class="flow-pulse" r="6">
+<animateMotion dur="5s" repeatCount="indefinite" path="M32,90 L728,90" />
+</circle>
+<circle class="flow-pulse flow-pulse-delayed" r="6">
+<animateMotion dur="5s" repeatCount="indefinite" begin="-2.5s" path="M32,90 L728,90" />
+</circle>
+</svg>
+</div>
+
+<a class="project-link" href="https://github.com/ankitverma1996/safe-llm-agent" target="_blank" rel="noopener">
+View Code
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</a>
+</article>
+
+<article class="project">
+<p class="project-type">Data Engineering</p>
+<h3>Data Pipeline ETL</h3>
+<p>
+An ETL pipeline for messy batch data: strict per-row validation with
+specific rejection reasons, type-safe KPI aggregation, and batched writes
+with per-batch retry.
+</p>
+<ul>
+<li>Every row gets a defined outcome: valid, or rejected with a reason</li>
+<li>Type conversion happens explicitly during validation, never inferred</li>
+<li>Batches tracked and retried independently; one failure never hides another</li>
+</ul>
+<div class="project-tags">
+<span class="project-tag">Pandas</span>
+<span class="project-tag">ETL</span>
+<span class="project-tag">Python</span>
+<span class="project-tag">pytest</span>
+</div>
+<p class="project-status">25 tests passing · CI on every push</p>
+
+<div id="diagram-etl" class="flow-diagram flow-diagram--compact" aria-label="Animated diagram of the ETL pipeline flow">
+<svg class="flow-svg" viewBox="0 0 760 200" role="img" aria-labelledby="flow-title-etl flow-desc-etl">
+<title id="flow-title-etl">ETL pipeline flow</title>
+<desc id="flow-desc-etl">Raw batch data is ingested, validated with per-row rejection reasons, aggregated into per-worker KPIs, and written out in batches with capped retries.</desc>
+<path class="flow-path-static" d="M32,90 L728,90" />
+
+<g class="flow-node" data-step="1">
+<rect x="32" y="60" width="150" height="60" rx="14" />
+<circle class="flow-node-badge" cx="44" cy="72" r="11" /><text class="flow-node-num" x="44" y="76">1</text>
+<text class="flow-node-label" x="107" y="86">Ingest</text>
+<text class="flow-node-sub" x="107" y="102">raw CSV batch</text>
+</g>
+
+<g class="flow-node" data-step="2">
+<rect x="214" y="60" width="150" height="60" rx="14" />
+<circle class="flow-node-badge" cx="226" cy="72" r="11" /><text class="flow-node-num" x="226" y="76">2</text>
+<text class="flow-node-label" x="289" y="86">Validate</text>
+<text class="flow-node-sub" x="289" y="102">typed, w/ reasons</text>
+</g>
+
+<g class="flow-node" data-step="3">
+<rect x="396" y="60" width="150" height="60" rx="14" />
+<circle class="flow-node-badge" cx="408" cy="72" r="11" /><text class="flow-node-num" x="408" y="76">3</text>
+<text class="flow-node-label" x="471" y="86">Aggregate</text>
+<text class="flow-node-sub" x="471" y="102">per-worker KPIs</text>
+</g>
+
+<g class="flow-node" data-step="4">
+<rect x="578" y="60" width="150" height="60" rx="14" />
+<circle class="flow-node-badge" cx="590" cy="72" r="11" /><text class="flow-node-num" x="590" y="76">4</text>
+<text class="flow-node-label" x="653" y="86">Batch Write</text>
+<text class="flow-node-sub" x="653" y="102">capped retries</text>
+</g>
+
+<circle class="flow-pulse" r="6">
+<animateMotion dur="5s" repeatCount="indefinite" path="M32,90 L728,90" />
+</circle>
+<circle class="flow-pulse flow-pulse-delayed" r="6">
+<animateMotion dur="5s" repeatCount="indefinite" begin="-2.5s" path="M32,90 L728,90" />
+</circle>
+</svg>
+</div>
+
+<a class="project-link" href="https://github.com/ankitverma1996/data-pipeline-etl" target="_blank" rel="noopener">
+View Code
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</a>
+</article>
+</div>
+</section>
+
 <section id="platform">
 <div class="section-heading">
 <p class="section-kicker">Power Platform Work</p>
@@ -369,7 +593,75 @@ inputs that need validation, normalization, and traceable processing.
 </div>
 </div>
 
-<div id="architecture-diagram" aria-label="System architecture diagram"></div>
+<div id="architecture-diagram" class="flow-diagram" aria-label="Animated diagram of the payroll-to-disbursement request flow">
+<svg class="flow-svg" viewBox="0 0 760 420" role="img" aria-labelledby="flow-title-arch flow-desc-arch">
+<title id="flow-title-arch">Payroll to disbursement request flow</title>
+<desc id="flow-desc-arch">An HR trigger flows through Power Automate, a FastAPI payroll engine, Dataverse, an encrypted disbursement step, and an async callback, with a return path notifying HR when complete.</desc>
+
+<path class="flow-path-static" d="M190,90 L305,90 L455,90 L570,90 L645,120 L645,300 L570,330 L455,330 L305,330 L190,330" />
+<path class="flow-path-return" d="M40,330 L10,330 L10,90 L40,90" marker-end="url(#returnArrow)" />
+
+<text class="flow-seg-label" x="380" y="76">Power Automate trigger</text>
+<text class="flow-seg-label" x="695" y="215" transform="rotate(90 695 215)">compute + batch write</text>
+<text class="flow-seg-label" x="380" y="356">encrypt + disburse (ICICI)</text>
+<text class="flow-seg-label" x="25" y="215" transform="rotate(-90 25 215)">status update + notify HR</text>
+
+<defs>
+<marker id="returnArrow" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+<path d="M0,0 L8,4 L0,8 Z" fill="var(--muted)" />
+</marker>
+</defs>
+
+<g class="flow-node" data-step="1">
+<rect x="40" y="60" width="150" height="60" rx="14" />
+<circle class="flow-node-badge" cx="52" cy="72" r="11" /><text class="flow-node-num" x="52" y="76">1</text>
+<text class="flow-node-label" x="115" y="86">HR Trigger</text>
+<text class="flow-node-sub" x="115" y="102">Power Apps</text>
+</g>
+
+<g class="flow-node" data-step="2">
+<rect x="305" y="60" width="150" height="60" rx="14" />
+<circle class="flow-node-badge" cx="317" cy="72" r="11" /><text class="flow-node-num" x="317" y="76">2</text>
+<text class="flow-node-label" x="380" y="86">Power Automate</text>
+<text class="flow-node-sub" x="380" y="102">Dataverse event flow</text>
+</g>
+
+<g class="flow-node" data-step="3">
+<rect x="570" y="60" width="150" height="60" rx="14" />
+<circle class="flow-node-badge" cx="582" cy="72" r="11" /><text class="flow-node-num" x="582" y="76">3</text>
+<text class="flow-node-label" x="645" y="86">Payroll Engine</text>
+<text class="flow-node-sub" x="645" y="102">FastAPI, KPI compute</text>
+</g>
+
+<g class="flow-node" data-step="4">
+<rect x="570" y="300" width="150" height="60" rx="14" />
+<circle class="flow-node-badge" cx="582" cy="312" r="11" /><text class="flow-node-num" x="582" y="316">4</text>
+<text class="flow-node-label" x="645" y="326">Dataverse</text>
+<text class="flow-node-sub" x="645" y="342">OData $batch write</text>
+</g>
+
+<g class="flow-node" data-step="5">
+<rect x="305" y="300" width="150" height="60" rx="14" />
+<circle class="flow-node-badge" cx="317" cy="312" r="11" /><text class="flow-node-num" x="317" y="316">5</text>
+<text class="flow-node-label" x="380" y="326">Disbursement</text>
+<text class="flow-node-sub" x="380" y="342">AES/RSA to ICICI</text>
+</g>
+
+<g class="flow-node" data-step="6">
+<rect x="40" y="300" width="150" height="60" rx="14" />
+<circle class="flow-node-badge" cx="52" cy="312" r="11" /><text class="flow-node-num" x="52" y="316">6</text>
+<text class="flow-node-label" x="115" y="326">Reverse-Feed API</text>
+<text class="flow-node-sub" x="115" y="342">async status callback</text>
+</g>
+
+<circle class="flow-pulse" r="6">
+<animateMotion dur="7s" repeatCount="indefinite" path="M190,90 L305,90 L455,90 L570,90 L645,120 L645,300 L570,330 L455,330 L305,330 L190,330" />
+</circle>
+<circle class="flow-pulse flow-pulse-delayed" r="6">
+<animateMotion dur="7s" repeatCount="indefinite" begin="-3.5s" path="M190,90 L305,90 L455,90 L570,90 L645,120 L645,300 L570,330 L455,330 L305,330 L190,330" />
+</circle>
+</svg>
+</div>
 </div>
 </section>
 
