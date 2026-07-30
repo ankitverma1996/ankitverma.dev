@@ -52,100 +52,25 @@ window.addEventListener("load", () => {
   }
 });
 
-const architectureContainer = document.getElementById("architecture-diagram");
+// Architecture / project diagrams: static, hand-authored SVGs live directly
+// in the HTML (elements with class "flow-svg") so they render instantly with
+// no external library or network dependency. The only JS needed here is to
+// respect prefers-reduced-motion, since SMIL <animateMotion> doesn't obey
+// that CSS media query on its own.
+const flowSvgs = document.querySelectorAll(".flow-svg");
 
-function renderArchitectureFallback(container) {
-  container.classList.add("diagram-fallback");
+if (flowSvgs.length > 0) {
+  const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
 
-  const fallback = document.createElement("div");
-  fallback.className = "diagram-fallback-content";
-
-  const title = document.createElement("h3");
-  title.textContent = "Architecture flow";
-
-  const description = document.createElement("p");
-  description.textContent =
-    "Frontend or Power Apps feed requests into backend services, which validate data, trigger automation, and sync reliable outputs into business systems.";
-
-  const list = document.createElement("ul");
-  [
-    "Interface layer for forms and operational actions",
-    "Backend API layer for validation and orchestration",
-    "Automation jobs for repeatable recurring tasks",
-    "Dataverse, SharePoint, or external systems as data endpoints",
-  ].forEach((item) => {
-    const li = document.createElement("li");
-    li.textContent = item;
-    list.appendChild(li);
-  });
-
-  fallback.append(title, description, list);
-  container.replaceChildren(fallback);
-}
-
-if (architectureContainer) {
-  if (
-    typeof window.vis !== "undefined" &&
-    typeof window.vis.DataSet === "function" &&
-    typeof window.vis.Network === "function"
-  ) {
-    const nodes = new window.vis.DataSet([
-      { id: 1, label: "Frontend\nor Power Apps", color: "#2dd4bf" },
-      { id: 2, label: "Backend\nServices", color: "#60a5fa" },
-      { id: 3, label: "Automation\nFlows", color: "#22c55e" },
-      { id: 4, label: "Dataverse /\nSharePoint", color: "#f59e0b" },
-      { id: 5, label: "External\nAPIs", color: "#f97316" },
-    ]);
-
-    const edges = new window.vis.DataSet([
-      { from: 1, to: 2 },
-      { from: 2, to: 3 },
-      { from: 2, to: 4 },
-      { from: 2, to: 5 },
-      { from: 5, to: 2 },
-      { from: 3, to: 4 },
-    ]);
-
-    const data = { nodes, edges };
-
-    const options = {
-      autoResize: true,
-      nodes: {
-        shape: "dot",
-        size: 22,
-        font: {
-          color: "#ecf3ff",
-          size: 16,
-          face: "Segoe UI",
-        },
-        borderWidth: 0,
-      },
-      edges: {
-        arrows: "to",
-        color: {
-          color: "rgba(159,178,209,.5)",
-          highlight: "#2dd4bf",
-        },
-        smooth: {
-          type: "cubicBezier",
-        },
-      },
-      interaction: {
-        hover: true,
-      },
-      physics: {
-        stabilization: true,
-        barnesHut: {
-          gravitationalConstant: -3800,
-          springLength: 180,
-          springConstant: 0.035,
-        },
-      },
-    };
-
-    new window.vis.Network(architectureContainer, data, options);
-  } else {
-    renderArchitectureFallback(architectureContainer);
+  if (prefersReducedMotion) {
+    flowSvgs.forEach((svg) => {
+      if (typeof svg.pauseAnimations === "function") {
+        svg.pauseAnimations();
+      }
+      svg.classList.add("motion-reduced");
+    });
   }
 }
 
