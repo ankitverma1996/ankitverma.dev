@@ -3,7 +3,7 @@
 Personal portfolio site for Ankit Verma, focused on backend engineering, automation systems, internal platforms, and Power Platform solutions.
 
 Live site:
-`https://ankitverma1996.github.io/ankitverma.dev/`
+`https://portfolioankit.duckdns.org/`
 
 ## Overview
 
