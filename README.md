@@ -1,86 +1,24 @@
-# ankitverma.dev
+# Ankit Verma — Portfolio Redirect Portal
 
-Personal portfolio site for Ankit Verma, focused on backend engineering, automation systems, internal platforms, and Power Platform solutions.
+> 📢 **NOTICE**: This repository serves as the official redirect portal for Ankit Verma's legacy static site. The portfolio and AI assistant backend have moved to dedicated GCP infrastructure at:
+>
+> **🌐 Live Site:** [https://portfolioankit.duckdns.org/](https://portfolioankit.duckdns.org/)
 
-Live site:
-`https://portfolioankit.duckdns.org/`
+---
 
-## Overview
+## 🚀 Automatic Redirection
 
-This is a static portfolio website built with plain HTML, CSS, and JavaScript.
-It highlights:
+Visitors landing on this site (via GitHub Pages or legacy URLs) are automatically redirected to `https://portfolioankit.duckdns.org/` via:
+1. **Instant JavaScript Redirect** (`window.location.replace`)
+2. **Meta Refresh Tag** (`<meta http-equiv="refresh">`)
+3. **SEO Canonical Pointer** (`<link rel="canonical">`)
 
-- Backend engineering projects
-- Power Platform solutions
-- Architecture thinking and system design approach
-- Resume and contact links
-- A small portfolio assistant for common questions
+---
 
-## Main Sections
+## 🛠 Repository Maintenance & Deployment
 
-- Hero section with resume and LinkedIn links
-- About and developer identity
-- Technology stack
-- Backend project highlights
-- Power Platform project highlights
-- Architecture section with visual diagram
-- FAQ
-- Contact section
+This repository continues to automatically deploy via GitHub Actions:
+- Workflow file: `.github/workflows/deploy-pages.yml`
+- Hosting: GitHub Pages
 
-## Tech Stack
-
-- HTML
-- CSS
-- JavaScript
-- `vis-network` for the architecture visualization
-- GitHub Pages for hosting
-
-## Local Preview
-
-Because this is a static site, you can preview it with any simple local server.
-
-Example with Python:
-
-```bash
-python -m http.server 8000
-```
-
-Then open:
-
-`http://localhost:8000`
-
-## Deployment
-
-The repository includes a GitHub Pages workflow at:
-
-`/.github/workflows/deploy-pages.yml`
-
-It uses:
-
-- `actions/configure-pages@v6`
-- `actions/upload-pages-artifact@v4`
-- `actions/deploy-pages@v5`
-
-To use that workflow, set GitHub Pages source to `GitHub Actions` in the repository settings.
-
-## Project Structure
-
-```text
-.
-|-- .github/
-|   `-- workflows/
-|       `-- deploy-pages.yml
-|-- index.html
-|-- style.css
-|-- script.js
-|-- profile.jpeg
-|-- resume.pdf
-`-- README.md
-```
-
-## Notes
-
-- The site is intentionally static and lightweight.
-- External links open safely in a new tab where needed.
-- The assistant is toggle-based and does not open by default.
-
+Any push to `main` instantly updates the redirection page on GitHub Pages.

@@ -2,783 +2,210 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta
-name="description"
-content="Portfolio of Ankit Verma, a backend and automation engineer building APIs, workflow systems, data pipelines, and Power Platform solutions."
->
-<meta property="og:title" content="Ankit Verma | Backend & Automation Engineer">
-<meta
-property="og:description"
-content="Portfolio of Ankit Verma, a backend and automation engineer building APIs, workflow systems, data pipelines, and Power Platform solutions."
->
-<meta property="og:image" content="https://ankitverma1996.github.io/ankitverma.dev/profile.jpeg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Immediate Meta Refresh Redirect -->
+<meta http-equiv="refresh" content="0; url=https://portfolioankit.duckdns.org/">
+<link rel="canonical" href="https://portfolioankit.duckdns.org/">
+
+<!-- SEO & Social Meta Tags -->
+<title>Redirecting to Ankit Verma's New Portfolio...</title>
+<meta name="description" content="Ankit Verma's personal developer portfolio and AI assistant have moved to https://portfolioankit.duckdns.org/">
+<meta property="og:title" content="Ankit Verma | Portfolio Moved">
+<meta property="og:description" content="Ankit Verma's developer portfolio & AI agent have moved to https://portfolioankit.duckdns.org/">
+<meta property="og:url" content="https://portfolioankit.duckdns.org/">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://ankitverma1996.github.io/ankitverma.dev/">
-<meta name="twitter:card" content="summary_large_image">
-<title>Ankit Verma | Backend & Automation Engineer</title>
-<link rel="stylesheet" href="style.css">
+
+<!-- Instant JavaScript Redirect -->
+<script>
+  (function() {
+    var newUrl = "https://portfolioankit.duckdns.org/" + window.location.search + window.location.hash;
+    window.location.replace(newUrl);
+  })();
+</script>
+
+<style>
+  :root {
+    --bg: #090d16;
+    --card-bg: rgba(18, 24, 38, 0.85);
+    --border: rgba(255, 255, 255, 0.1);
+    --text-main: #f1f5f9;
+    --text-muted: #94a3b8;
+    --accent: #38bdf8;
+    --accent-glow: rgba(56, 189, 248, 0.25);
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: var(--bg);
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 1.5rem;
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* Dynamic background grid & glowing ambient light */
+  body::before {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .redirect-card {
+    position: relative;
+    z-index: 1;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 20px;
+    padding: 3rem 2.5rem;
+    max-width: 480px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.4s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    border-radius: 9999px;
+    background: rgba(56, 189, 248, 0.1);
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    color: var(--accent);
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+  }
+
+  .badge-pulse {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--accent);
+    box-shadow: 0 0 10px var(--accent);
+    animation: pulse 1.5s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(1.3); }
+  }
+
+  h1 {
+    font-size: 1.85rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.02em;
+    background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 0.9rem 1.5rem;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%);
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    box-shadow: 0 10px 25px rgba(2, 132, 199, 0.35);
+    transition: all 0.2s ease;
+  }
+
+  .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px rgba(2, 132, 199, 0.45);
+  }
+
+  .btn svg {
+    width: 18px;
+    height: 18px;
+    transition: transform 0.2s ease;
+  }
+
+  .btn:hover svg {
+    transform: translateX(4px);
+  }
+
+  .target-url {
+    margin-top: 1.5rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    word-break: break-all;
+  }
+
+  .target-url a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+</style>
 </head>
 <body>
 
-<nav>
-<a href="#top" class="logo">Ankit Verma</a>
+<div class="redirect-card">
+  <div class="badge">
+    <span class="badge-pulse"></span>
+    Website Relocated
+  </div>
+  
+  <h1>We've Moved!</h1>
+  <p>Ankit Verma's personal portfolio & AI Assistant are now hosted on dedicated cloud infrastructure.</p>
 
-<div class="nav-links">
-<a href="#about">About</a>
-<a href="#stack">Stack</a>
-<a href="#backend">Projects</a>
-<a href="#platform">Platform</a>
-<a href="#open-source">Open Source</a>
-<a href="#architecture">Architecture</a>
-<a href="#faq">FAQ</a>
-<a href="#contact">Contact</a>
-</div>
-</nav>
+  <a href="https://portfolioankit.duckdns.org/" id="redirect-btn" class="btn">
+    <span>Go to New Site Now</span>
+    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+    </svg>
+  </a>
 
-<section class="hero" id="top">
-<div class="hero-bg" aria-hidden="true"></div>
-
-<img src="profile.jpeg" alt="Portrait of Ankit Verma" class="profile">
-
-<p class="eyebrow">Backend, Automation, Internal Platforms</p>
-
-<h1>Building reliable systems that turn manual operations into repeatable software workflows.</h1>
-
-<p class="hero-copy">
-I design APIs, workflow automation, enterprise integrations, and internal
-tools that help teams move faster with less manual coordination. My work sits
-at the intersection of backend engineering, business process automation, and
-operational clarity.
-</p>
-
-<p class="hero-copy">
-3+ years of experience. Software Development Engineer &ndash; Backend &amp;
-Integrations at Gigmo Solutions Pvt Ltd, June 2023 &ndash; Present.
-</p>
-
-<div class="hero-buttons">
-<a href="resume.pdf" class="btn" target="_blank" rel="noopener noreferrer">Download Resume</a>
-<a
-href="https://linkedin.com/in/ankitverma1996"
-class="btn secondary"
-target="_blank"
-rel="noopener noreferrer"
->
-LinkedIn
-</a>
+  <div class="target-url">
+    Destination: <a href="https://portfolioankit.duckdns.org/">https://portfolioankit.duckdns.org/</a>
+  </div>
 </div>
 
-<div class="hero-highlights">
-<div class="highlight-card">
-<span class="highlight-label">Core Work</span>
-<strong>API services and integrations</strong>
-</div>
-
-<div class="highlight-card">
-<span class="highlight-label">Automation</span>
-<strong>Workflows for HR, MIS, and operations</strong>
-</div>
-
-<div class="highlight-card">
-<span class="highlight-label">Platforms</span>
-<strong>Power Apps, Dataverse, and data pipelines</strong>
-</div>
-</div>
-</section>
-
-<section id="about">
-<div class="section-heading">
-<p class="section-kicker">About</p>
-<h2>From repetitive business tasks to dependable internal systems</h2>
-</div>
-
-<div class="two-column">
-<p>
-I specialize in backend engineering and automation for teams that depend on
-accurate workflows, timely data, and traceable operations. That usually means
-taking a process that is spread across spreadsheets, email follow-ups, and
-manual approvals, then rebuilding it as a cleaner system with APIs, scheduled
-jobs, or Power Platform applications.
-</p>
-
-<p>
-The work I enjoy most is the kind that improves day-to-day execution: payroll
-flows that are easier to observe, attendance pipelines that reconcile data
-automatically, approval systems that stop depending on inbox chaos, and
-business tools that give internal teams a more reliable way to operate.
-</p>
-</div>
-</section>
-
-<section id="identity">
-<div class="section-heading">
-<p class="section-kicker">How I Add Value</p>
-<h2>A blend of engineering depth and business workflow understanding</h2>
-</div>
-
-<div class="grid feature-grid">
-<article class="card detail-card">
-<h3>Automation Architect</h3>
-<p>
-I map operational bottlenecks and redesign them into structured flows with
-clear handoffs, fewer manual dependencies, and better visibility.
-</p>
-</article>
-
-<article class="card detail-card">
-<h3>API Builder</h3>
-<p>
-I build backend services that handle integrations, validation, orchestration,
-and status tracking so internal processes can scale more cleanly.
-</p>
-</article>
-
-<article class="card detail-card">
-<h3>Workflow Engineer</h3>
-<p>
-I use Power Apps, Power Automate, Dataverse, and supporting backend logic to
-turn approval chains and operational routines into maintainable systems.
-</p>
-</article>
-
-<article class="card detail-card">
-<h3>Data Pipeline Builder</h3>
-<p>
-I create ETL style pipelines that clean, normalize, and reconcile data from
-different sources so teams can work from more dependable outputs.
-</p>
-</article>
-</div>
-</section>
-
-<section id="stack">
-<div class="section-heading">
-<p class="section-kicker">Technology Stack</p>
-<h2>Tools I use to build backend and automation systems</h2>
-</div>
-
-<div class="grid stack-grid">
-<div class="card">Python</div>
-<div class="card">FastAPI</div>
-<div class="card">Flask</div>
-<div class="card">Pandas</div>
-<div class="card">Docker</div>
-<div class="card">Redis</div>
-<div class="card">Dataverse</div>
-<div class="card">Power Apps</div>
-<div class="card">Power Automate</div>
-<div class="card">SharePoint</div>
-<div class="card">Microsoft Graph</div>
-<div class="card">REST APIs</div>
-</div>
-</section>
-
-<section id="backend">
-<div class="section-heading">
-<p class="section-kicker">Selected Backend Work</p>
-<h2>Projects focused on reliability, integration, and operational automation</h2>
-</div>
-
-<div class="project-grid">
-<article class="project">
-<p class="project-type">External Integration</p>
-<h3>Secure Callback Integration</h3>
-<p>
-Built a backend service for receiving encrypted transaction updates and
-document uploads from external systems. The goal was to turn third-party
-callbacks into a structured, validated workflow that internal teams could rely
-on without manual intervention.
-</p>
-<ul>
-<li>Validated encrypted payloads before downstream processing</li>
-<li>Handled document ingestion and workflow-safe status updates</li>
-<li>Handles ~300-400 encrypted transactions per month</li>
-</ul>
-</article>
-
-<article class="project">
-<p class="project-type">Data Reconciliation</p>
-<h3>Biometric Attendance Automation</h3>
-<p>
-Designed an automated reconciliation pipeline for biometric logs, leave data,
-and attendance records. The focus was accuracy, repeatability, and reducing
-the amount of manual cleanup needed each cycle.
-</p>
-<ul>
-<li>Pandas-based ETL logic for normalization and rule processing</li>
-<li>Spreadsheet ingestion and transformation workflows</li>
-<li>Processes 100-120 employee records per day</li>
-<li>Eliminates 2-3 hours per day of manual attendance cleanup</li>
-</ul>
-</article>
-
-<article class="project">
-<p class="project-type">Service Modernization</p>
-<h3>API Driven Payroll Processing</h3>
-<p>
-<strong>Problem:</strong> Payroll-related workflows were tied to opaque
-cron-driven execution and were difficult to observe when support teams needed
-status or troubleshooting context.
-</p>
-<p>
-<strong>Approach:</strong> Moved execution into API-oriented services with
-FastAPI endpoints for trigger and status driven processing, giving operations
-teams clearer orchestration and integration points.
-</p>
-<p>
-<strong>Result:</strong> Processes 400-500 payroll records per run across
-3-4 monthly cycles, with ETL batches handling 40k-50k records per batch.
-</p>
-</article>
-
-<article class="project">
-<p class="project-type">Scheduled Automation</p>
-<h3>Payment Automation Engine</h3>
-<p>
-<strong>Problem:</strong> Recurring payout workflows depended on slow manual
-handoffs, stretching payout processing turnaround to about 5 days.
-</p>
-<p>
-<strong>Approach:</strong> Extended payout workflows with scheduled jobs,
-supporting data ingestion pipelines, and backend logic organized around
-repeatable batch processing.
-</p>
-<p>
-<strong>Result:</strong> Reduced payout processing turnaround from 5 days to
-1 day and handles ~300-400 monthly disbursements.
-</p>
-</article>
-</div>
-</section>
-
-<section id="open-source">
-<div class="section-heading">
-<p class="section-kicker">Open Source</p>
-<h2>Public repos showing the actual code behind the work above</h2>
-<p>
-Three small, fully tested projects — each with CI running on every push —
-that mirror real patterns from production systems: secure API design,
-safe LLM agent permissions, and reliable ETL processing.
-</p>
-</div>
-
-<div class="project-grid">
-<article class="project">
-<p class="project-type">API &amp; Security</p>
-<h3>Secure Payroll Disbursement API</h3>
-<p>
-A FastAPI microservice demonstrating production payroll-system patterns:
-OAuth2 client-credentials auth, decimal-correct financial math, and hybrid
-AES/RSA encryption for payment payloads.
-</p>
-<ul>
-<li>Decimal-safe rounding, never bare floats, for currency math</li>
-<li>Fresh AES-256 key per request, RSA-encrypted, for each payload</li>
-<li>Batched disbursement with per-record success/failure tracking</li>
-</ul>
-<div class="project-tags">
-<span class="project-tag">FastAPI</span>
-<span class="project-tag">OAuth2</span>
-<span class="project-tag">AES/RSA</span>
-<span class="project-tag">pytest</span>
-</div>
-<p class="project-status">10 tests passing · CI on every push</p>
-
-<div id="diagram-payroll-api" class="flow-diagram flow-diagram--compact" aria-label="Animated diagram of the payroll API request flow">
-<svg class="flow-svg" viewBox="0 0 760 200" role="img" aria-labelledby="flow-title-payroll flow-desc-payroll">
-<title id="flow-title-payroll">Payroll API request flow</title>
-<desc id="flow-desc-payroll">A request authenticates via OAuth2, computes net pay with decimal-safe math, encrypts the payload with hybrid AES and RSA encryption, then disburses it in a tracked batch.</desc>
-<path class="flow-path-static" d="M32,90 L728,90" />
-
-<g class="flow-node" data-step="1">
-<rect x="32" y="60" width="150" height="60" rx="14" />
-<circle class="flow-node-badge" cx="44" cy="72" r="11" /><text class="flow-node-num" x="44" y="76">1</text>
-<text class="flow-node-label" x="107" y="86">OAuth2 Auth</text>
-<text class="flow-node-sub" x="107" y="102">client credentials</text>
-</g>
-
-<g class="flow-node" data-step="2">
-<rect x="214" y="60" width="150" height="60" rx="14" />
-<circle class="flow-node-badge" cx="226" cy="72" r="11" /><text class="flow-node-num" x="226" y="76">2</text>
-<text class="flow-node-label" x="289" y="86">Compute Pay</text>
-<text class="flow-node-sub" x="289" y="102">decimal-safe math</text>
-</g>
-
-<g class="flow-node" data-step="3">
-<rect x="396" y="60" width="150" height="60" rx="14" />
-<circle class="flow-node-badge" cx="408" cy="72" r="11" /><text class="flow-node-num" x="408" y="76">3</text>
-<text class="flow-node-label" x="471" y="86">Encrypt</text>
-<text class="flow-node-sub" x="471" y="102">AES-256 + RSA hybrid</text>
-</g>
-
-<g class="flow-node" data-step="4">
-<rect x="578" y="60" width="150" height="60" rx="14" />
-<circle class="flow-node-badge" cx="590" cy="72" r="11" /><text class="flow-node-num" x="590" y="76">4</text>
-<text class="flow-node-label" x="653" y="86">Disburse</text>
-<text class="flow-node-sub" x="653" y="102">batched, tracked</text>
-</g>
-
-<circle class="flow-pulse" r="6">
-<animateMotion dur="5s" repeatCount="indefinite" path="M32,90 L728,90" />
-</circle>
-<circle class="flow-pulse flow-pulse-delayed" r="6">
-<animateMotion dur="5s" repeatCount="indefinite" begin="-2.5s" path="M32,90 L728,90" />
-</circle>
-</svg>
-</div>
-
-<a class="project-link" href="https://github.com/ankitverma1996/secure-payroll-api" target="_blank" rel="noopener">
-View Code
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-</a>
-</article>
-
-<article class="project">
-<p class="project-type">LLM Agent Safety</p>
-<h3>Safe LLM Agent — Tiered Permissions</h3>
-<p>
-A demo of the safety pattern behind a production Teams-based agent: the
-model can propose a mutation or a payment, but a human must approve it
-before it executes.
-</p>
-<ul>
-<li>Read actions execute immediately; mutation and money actions never do</li>
-<li>Approvals persisted to disk before execution, so a restart can't replay one</li>
-<li>Money-tier actions serialized behind a lock to prevent concurrent payments</li>
-</ul>
-<div class="project-tags">
-<span class="project-tag">Anthropic API</span>
-<span class="project-tag">Agent Safety</span>
-<span class="project-tag">Python</span>
-<span class="project-tag">pytest</span>
-</div>
-<p class="project-status">6 tests passing · CI on every push</p>
-
-<div id="diagram-agent" class="flow-diagram flow-diagram--compact" aria-label="Animated diagram of the tiered agent approval flow">
-<svg class="flow-svg" viewBox="0 0 760 200" role="img" aria-labelledby="flow-title-agent flow-desc-agent">
-<title id="flow-title-agent">Tiered agent approval flow</title>
-<desc id="flow-desc-agent">The model proposes a tool call, which is checked against its tier. Mutation and money tier actions wait for a human to approve with a code, persisted to disk, before executing.</desc>
-<path class="flow-path-static" d="M32,90 L728,90" />
-
-<g class="flow-node" data-step="1">
-<rect x="32" y="60" width="150" height="60" rx="14" />
-<circle class="flow-node-badge" cx="44" cy="72" r="11" /><text class="flow-node-num" x="44" y="76">1</text>
-<text class="flow-node-label" x="107" y="86">Model Call</text>
-<text class="flow-node-sub" x="107" y="102">proposes a tool</text>
-</g>
-
-<g class="flow-node" data-step="2">
-<rect x="214" y="60" width="150" height="60" rx="14" />
-<circle class="flow-node-badge" cx="226" cy="72" r="11" /><text class="flow-node-num" x="226" y="76">2</text>
-<text class="flow-node-label" x="289" y="86">Tier Check</text>
-<text class="flow-node-sub" x="289" y="102">read, mutation, money</text>
-</g>
-
-<g class="flow-node" data-step="3">
-<rect x="396" y="60" width="150" height="60" rx="14" />
-<circle class="flow-node-badge" cx="408" cy="72" r="11" /><text class="flow-node-num" x="408" y="76">3</text>
-<text class="flow-node-label" x="471" y="86">Human Approval</text>
-<text class="flow-node-sub" x="471" y="102">code, persisted</text>
-</g>
-
-<g class="flow-node" data-step="4">
-<rect x="578" y="60" width="150" height="60" rx="14" />
-<circle class="flow-node-badge" cx="590" cy="72" r="11" /><text class="flow-node-num" x="590" y="76">4</text>
-<text class="flow-node-label" x="653" y="86">Execute</text>
-<text class="flow-node-sub" x="653" y="102">money tier locked</text>
-</g>
-
-<circle class="flow-pulse" r="6">
-<animateMotion dur="5s" repeatCount="indefinite" path="M32,90 L728,90" />
-</circle>
-<circle class="flow-pulse flow-pulse-delayed" r="6">
-<animateMotion dur="5s" repeatCount="indefinite" begin="-2.5s" path="M32,90 L728,90" />
-</circle>
-</svg>
-</div>
-
-<a class="project-link" href="https://github.com/ankitverma1996/safe-llm-agent" target="_blank" rel="noopener">
-View Code
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-</a>
-</article>
-
-<article class="project">
-<p class="project-type">Data Engineering</p>
-<h3>Data Pipeline ETL</h3>
-<p>
-An ETL pipeline for messy batch data: strict per-row validation with
-specific rejection reasons, type-safe KPI aggregation, and batched writes
-with per-batch retry.
-</p>
-<ul>
-<li>Every row gets a defined outcome: valid, or rejected with a reason</li>
-<li>Type conversion happens explicitly during validation, never inferred</li>
-<li>Batches tracked and retried independently; one failure never hides another</li>
-</ul>
-<div class="project-tags">
-<span class="project-tag">Pandas</span>
-<span class="project-tag">ETL</span>
-<span class="project-tag">Python</span>
-<span class="project-tag">pytest</span>
-</div>
-<p class="project-status">25 tests passing · CI on every push</p>
-
-<div id="diagram-etl" class="flow-diagram flow-diagram--compact" aria-label="Animated diagram of the ETL pipeline flow">
-<svg class="flow-svg" viewBox="0 0 760 200" role="img" aria-labelledby="flow-title-etl flow-desc-etl">
-<title id="flow-title-etl">ETL pipeline flow</title>
-<desc id="flow-desc-etl">Raw batch data is ingested, validated with per-row rejection reasons, aggregated into per-worker KPIs, and written out in batches with capped retries.</desc>
-<path class="flow-path-static" d="M32,90 L728,90" />
-
-<g class="flow-node" data-step="1">
-<rect x="32" y="60" width="150" height="60" rx="14" />
-<circle class="flow-node-badge" cx="44" cy="72" r="11" /><text class="flow-node-num" x="44" y="76">1</text>
-<text class="flow-node-label" x="107" y="86">Ingest</text>
-<text class="flow-node-sub" x="107" y="102">raw CSV batch</text>
-</g>
-
-<g class="flow-node" data-step="2">
-<rect x="214" y="60" width="150" height="60" rx="14" />
-<circle class="flow-node-badge" cx="226" cy="72" r="11" /><text class="flow-node-num" x="226" y="76">2</text>
-<text class="flow-node-label" x="289" y="86">Validate</text>
-<text class="flow-node-sub" x="289" y="102">typed, w/ reasons</text>
-</g>
-
-<g class="flow-node" data-step="3">
-<rect x="396" y="60" width="150" height="60" rx="14" />
-<circle class="flow-node-badge" cx="408" cy="72" r="11" /><text class="flow-node-num" x="408" y="76">3</text>
-<text class="flow-node-label" x="471" y="86">Aggregate</text>
-<text class="flow-node-sub" x="471" y="102">per-worker KPIs</text>
-</g>
-
-<g class="flow-node" data-step="4">
-<rect x="578" y="60" width="150" height="60" rx="14" />
-<circle class="flow-node-badge" cx="590" cy="72" r="11" /><text class="flow-node-num" x="590" y="76">4</text>
-<text class="flow-node-label" x="653" y="86">Batch Write</text>
-<text class="flow-node-sub" x="653" y="102">capped retries</text>
-</g>
-
-<circle class="flow-pulse" r="6">
-<animateMotion dur="5s" repeatCount="indefinite" path="M32,90 L728,90" />
-</circle>
-<circle class="flow-pulse flow-pulse-delayed" r="6">
-<animateMotion dur="5s" repeatCount="indefinite" begin="-2.5s" path="M32,90 L728,90" />
-</circle>
-</svg>
-</div>
-
-<a class="project-link" href="https://github.com/ankitverma1996/data-pipeline-etl" target="_blank" rel="noopener">
-View Code
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-</a>
-</article>
-</div>
-</section>
-
-<section id="platform">
-<div class="section-heading">
-<p class="section-kicker">Power Platform Work</p>
-<h2>Business applications and approval systems built for real internal teams</h2>
-</div>
-
-<div class="project-grid">
-<article class="project">
-<p class="project-type">Internal Tools</p>
-<h3>Internal Automation Platform</h3>
-<p>
-Built and deployed 15+ Power Apps canvas applications, including 4 flagship
-systems: an exception-handling app, an Employee Self-Service app for attendance
-and designation tracking, an HR Headcount app for the MIS team, and an IT Audit
-Records app for the IT team. These apps were integrated with Power Automate
-workflows to reduce repetitive work while giving teams a more consistent
-process layer for everyday operations.
-</p>
-<ul>
-<li>Dataverse-backed application flows for business data</li>
-<li>Workflow orchestration through Power Automate</li>
-<li>Operational dashboards and automated notifications</li>
-</ul>
-</article>
-
-<article class="project">
-<p class="project-type">Approvals</p>
-<h3>Team Approval Automation System</h3>
-<p>
-Created a multi-level approval system using Power Apps, Power Automate, and
-Dataverse. The main goal was to make approvals visible, auditable, and less
-dependent on informal coordination through email or chat.
-</p>
-<ul>
-<li>Multi-step approval routing with status tracking</li>
-<li>Automated notifications at each stage of the process</li>
-<li>Dataverse as the central workflow data layer</li>
-</ul>
-</article>
-
-<article class="project">
-<p class="project-type">Document Flow</p>
-<h3>Document Management System</h3>
-<p>
-Built a Power Apps based document workflow connected to SharePoint and
-Microsoft Graph. The application supported document tracking, reporting, and
-process visibility for teams handling internal records.
-</p>
-<ul>
-<li>SharePoint-integrated document handling</li>
-<li>Graph API support for reporting and automation</li>
-<li>Clearer tracking across document lifecycle steps</li>
-</ul>
-</article>
-
-<article class="project">
-<p class="project-type">Operations Workflow</p>
-<h3>Attendance Automation System</h3>
-<p>
-Created a Power Apps interface linked with monitoring APIs and backend
-automation steps to improve attendance operations. The solution connected user
-facing workflows with the data processing needed behind the scenes.
-</p>
-<ul>
-<li>External monitoring API integration</li>
-<li>Operational workflow support through automation</li>
-<li>User interface for simpler attendance handling</li>
-</ul>
-</article>
-</div>
-</section>
-
-<section id="architecture">
-<div class="section-heading">
-<p class="section-kicker">Architecture</p>
-<h2>How I usually structure automation-heavy systems</h2>
-</div>
-
-<div class="architecture-layout">
-<div class="architecture-copy">
-<p>
-Most of my projects follow the same engineering idea: keep the user-facing
-layer simple, move validation and orchestration into backend services, and make
-integrations explicit so workflows stay observable instead of becoming hidden
-operational logic.
-</p>
-
-<p>
-That typically means combining an interface layer such as Power Apps or a web
-frontend with API services, scheduled jobs, workflow orchestration, and a
-storage layer like Dataverse or SharePoint. External systems are treated as
-inputs that need validation, normalization, and traceable processing.
-</p>
-
-<div class="architecture-points">
-<div class="arch-card">
-<h3>Interface Layer</h3>
-<p>Forms, internal apps, or frontends that collect inputs and show status.</p>
-</div>
-
-<div class="arch-card">
-<h3>Service Layer</h3>
-<p>APIs handle validation, business rules, orchestration, and integrations.</p>
-</div>
-
-<div class="arch-card">
-<h3>Automation Layer</h3>
-<p>Scheduled jobs and Power Automate flows keep recurring work consistent.</p>
-</div>
-
-<div class="arch-card">
-<h3>Data Layer</h3>
-<p>Dataverse, SharePoint, and structured datasets store reliable outputs.</p>
-</div>
-</div>
-</div>
-
-<div id="architecture-diagram" class="flow-diagram" aria-label="Animated diagram of the payroll-to-disbursement request flow">
-<svg class="flow-svg" viewBox="0 0 760 420" role="img" aria-labelledby="flow-title-arch flow-desc-arch">
-<title id="flow-title-arch">Payroll to disbursement request flow</title>
-<desc id="flow-desc-arch">An HR trigger flows through Power Automate, a FastAPI payroll engine, Dataverse, an encrypted disbursement step, and an async callback, with a return path notifying HR when complete.</desc>
-
-<path class="flow-path-static" d="M190,90 L305,90 L455,90 L570,90 L645,120 L645,300 L570,330 L455,330 L305,330 L190,330" />
-<path class="flow-path-return" d="M40,330 L10,330 L10,90 L40,90" marker-end="url(#returnArrow)" />
-
-<text class="flow-seg-label" x="380" y="76">Power Automate trigger</text>
-<text class="flow-seg-label" x="695" y="215" transform="rotate(90 695 215)">compute + batch write</text>
-<text class="flow-seg-label" x="380" y="356">encrypt + disburse (ICICI)</text>
-<text class="flow-seg-label" x="25" y="215" transform="rotate(-90 25 215)">status update + notify HR</text>
-
-<defs>
-<marker id="returnArrow" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
-<path d="M0,0 L8,4 L0,8 Z" fill="var(--muted)" />
-</marker>
-</defs>
-
-<g class="flow-node" data-step="1">
-<rect x="40" y="60" width="150" height="60" rx="14" />
-<circle class="flow-node-badge" cx="52" cy="72" r="11" /><text class="flow-node-num" x="52" y="76">1</text>
-<text class="flow-node-label" x="115" y="86">HR Trigger</text>
-<text class="flow-node-sub" x="115" y="102">Power Apps</text>
-</g>
-
-<g class="flow-node" data-step="2">
-<rect x="305" y="60" width="150" height="60" rx="14" />
-<circle class="flow-node-badge" cx="317" cy="72" r="11" /><text class="flow-node-num" x="317" y="76">2</text>
-<text class="flow-node-label" x="380" y="86">Power Automate</text>
-<text class="flow-node-sub" x="380" y="102">Dataverse event flow</text>
-</g>
-
-<g class="flow-node" data-step="3">
-<rect x="570" y="60" width="150" height="60" rx="14" />
-<circle class="flow-node-badge" cx="582" cy="72" r="11" /><text class="flow-node-num" x="582" y="76">3</text>
-<text class="flow-node-label" x="645" y="86">Payroll Engine</text>
-<text class="flow-node-sub" x="645" y="102">FastAPI, KPI compute</text>
-</g>
-
-<g class="flow-node" data-step="4">
-<rect x="570" y="300" width="150" height="60" rx="14" />
-<circle class="flow-node-badge" cx="582" cy="312" r="11" /><text class="flow-node-num" x="582" y="316">4</text>
-<text class="flow-node-label" x="645" y="326">Dataverse</text>
-<text class="flow-node-sub" x="645" y="342">OData $batch write</text>
-</g>
-
-<g class="flow-node" data-step="5">
-<rect x="305" y="300" width="150" height="60" rx="14" />
-<circle class="flow-node-badge" cx="317" cy="312" r="11" /><text class="flow-node-num" x="317" y="316">5</text>
-<text class="flow-node-label" x="380" y="326">Disbursement</text>
-<text class="flow-node-sub" x="380" y="342">AES/RSA to ICICI</text>
-</g>
-
-<g class="flow-node" data-step="6">
-<rect x="40" y="300" width="150" height="60" rx="14" />
-<circle class="flow-node-badge" cx="52" cy="312" r="11" /><text class="flow-node-num" x="52" y="316">6</text>
-<text class="flow-node-label" x="115" y="326">Reverse-Feed API</text>
-<text class="flow-node-sub" x="115" y="342">async status callback</text>
-</g>
-
-<circle class="flow-pulse" r="6">
-<animateMotion dur="7s" repeatCount="indefinite" path="M190,90 L305,90 L455,90 L570,90 L645,120 L645,300 L570,330 L455,330 L305,330 L190,330" />
-</circle>
-<circle class="flow-pulse flow-pulse-delayed" r="6">
-<animateMotion dur="7s" repeatCount="indefinite" begin="-3.5s" path="M190,90 L305,90 L455,90 L570,90 L645,120 L645,300 L570,330 L455,330 L305,330 L190,330" />
-</circle>
-</svg>
-</div>
-</div>
-</section>
-
-<section id="faq">
-<div class="section-heading">
-<p class="section-kicker">FAQ</p>
-<h2>Quick answers about the kind of work I do</h2>
-</div>
-
-<div class="faq-grid">
-<article class="faq-item">
-<h3>What kind of problems do I solve?</h3>
-<p>
-I work on internal systems where business processes have outgrown manual
-coordination. That includes approvals, payroll support workflows, attendance
-processing, operational reporting, and integrations between business tools.
-</p>
-</article>
-
-<article class="faq-item">
-<h3>Where do I add the most value?</h3>
-<p>
-I add the most value where backend logic and business workflow design need to
-work together. I am comfortable translating operational pain points into APIs,
-automation rules, and maintainable process flows.
-</p>
-</article>
-
-<article class="faq-item">
-<h3>What technologies do I use most often?</h3>
-<p>
-Python, FastAPI, Flask, Pandas, Power Apps, Power Automate, Dataverse,
-SharePoint, and REST based integrations form the core of my day-to-day work.
-</p>
-</article>
-
-<article class="faq-item">
-<h3>What am I aiming for in a role?</h3>
-<p>
-I am most aligned with roles that involve backend systems, automation
-engineering, internal platforms, workflow orchestration, and business process
-tooling with real operational impact.
-</p>
-</article>
-</div>
-</section>
-
-<section id="contact">
-<div class="section-heading">
-<p class="section-kicker">Contact</p>
-<h2>Interested in backend systems, internal tools, or automation work?</h2>
-</div>
-
-<p class="contact-copy">
-If you are building software for operations, workflow-heavy teams, or internal
-platforms, I would be glad to connect. This portfolio is focused on the kind of
-engineering work where reliable processes matter as much as clean code.
-</p>
-
-<div class="hero-buttons">
-<a href="mailto:ankitknp0@gmail.com" class="btn">Email</a>
-<a
-href="https://github.com/ankitverma1996"
-class="btn secondary"
-target="_blank"
-rel="noopener noreferrer"
->
-GitHub
-</a>
-</div>
-</section>
-
-<footer>
-<p>&copy; 2026 Ankit Verma</p>
-</footer>
-
-<div class="chatbot-shell">
-<button
-id="chat-toggle"
-class="chat-toggle"
-type="button"
-aria-expanded="false"
-aria-controls="chatbot"
->
-Ask Assistant
-</button>
-
-<div id="chatbot" aria-label="Portfolio chatbot" hidden>
-<div class="chatbot-card">
-<div class="chat-header-row">
-<div id="chat-header">
-<strong>Portfolio Assistant</strong>
-<p>Ask about projects, stack, architecture, experience, or contact.</p>
-</div>
-
-<button id="chat-close" class="chat-close" type="button" aria-label="Close assistant">
-Close
-</button>
-</div>
-
-<div id="chat-messages" aria-live="polite"></div>
-
-<div class="chat-suggestions">
-<button type="button" class="chat-chip" data-question="What backend projects have you built?">Projects</button>
-<button type="button" class="chat-chip" data-question="What is your tech stack?">Stack</button>
-<button type="button" class="chat-chip" data-question="How do you design systems?">Architecture</button>
-</div>
-
-<div class="chat-input-row">
-<input id="chat-input" placeholder="Ask a question about my work">
-<button id="chat-send" type="button">Send</button>
-</div>
-</div>
-</div>
-</div>
-
-<script src="script.js"></script>
-
+<script>
+  // Fallback redirect trigger
+  setTimeout(function() {
+    window.location.href = "https://portfolioankit.duckdns.org/";
+  }, 100);
+</script>
 </body>
 </html>
